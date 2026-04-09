@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biswa Bhusan — Student Profile</title>
+    <link rel="stylesheet" href="student_profile.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- SIDEBAR NAV -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">BI</div>
+        <ul class="sidebar-links">
+            <li><a href="#hero" class="nav-link active" data-label="Home"> <span>⌂</span></a></li>
+            <li><a href="#about" class="nav-link" data-label="About"> <span>✦</span></a></li>
+            <li><a href="#subjects" class="nav-link" data-label="Subjects"><span>◈</span></a></li>
+            <li><a href="#marks" class="nav-link" data-label="Marks"> <span>◉</span></a></li>
+            <li><a href="#goals" class="nav-link" data-label="Goals"> <span>◎</span></a></li>
+            <li><a href="#contact" class="nav-link" data-label="Contact"> <span>✉</span></a></li>
+        </ul>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">◑</button>
+    </nav>
+
+    <!-- MOBILE TOPBAR -->
+    <div class="topbar">
+        <span class="mob-brand">Biswa Bhusan</span>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" onclick="closeMob()">Home</a>
+        <a href="#about" onclick="closeMob()">About</a>
+        <a href="#subjects" onclick="closeMob()">Subjects</a>
+        <a href="#marks" onclick="closeMob()">Marks</a>
+        <a href="#goals" onclick="closeMob()">Goals</a>
+        <a href="#contact" onclick="closeMob()">Contact</a>
+        <button onclick="toggleTheme();closeMob();">Toggle Theme</button>
+    </div>
+
+    <div class="page-wrap">
+
+        <!-- HERO -->
+        <section id="hero" class="hero">
+            <div class="hero-grid-bg"></div>
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <div class="orb orb3"></div>
+            <div class="hero-inner">
+                <div class="hero-badge reveal">
+                    <span class="pulse-dot"></span>
+                    Bsc ITM · Information Technology and Management· Lakshya Institute Of Technology
+                </div>
+                <h1 class="hero-name reveal d1">
+                    <span class="name-line">Biswa</span>
+                    <span class="name-line accent-word">Bhusan</span>
+                </h1>
+                <p class="hero-tagline reveal d2">Builder. Thinker. Perpetual learner of everything.</p>
+                <div class="hero-btns reveal d3">
+                    <button class="btn-accent pulse-btn" id="greetBtn">Say Hello 👋</button>
+                    <a href="#about" class="btn-ghost">Explore Profile ↓</a>
+                </div>
+                <p id="greetMsg" class="greet-msg" role="status" aria-live="polite"></p>
+            </div>
+            <div class="hero-stats reveal d4">
+                <div class="hs-item"><span class="hs-val" id="gpaDisplay">—</span><span class="hs-label">Avg
+                        Score</span></div>
+                <div class="hs-sep"></div>
+                <div class="hs-item"><span class="hs-val">6</span><span class="hs-label">Subjects</span></div>
+                <div class="hs-sep"></div>
+                <div class="hs-item"><span class="hs-val">4</span><span class="hs-label">Goals</span></div>
+                <div class="hs-sep"></div>
+                <div class="hs-item"><span class="hs-val">Bsc</span><span class="hs-label">ITM</span></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="eyebrow">01 — About</span>
+                    <h2>Who I Am</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card reveal">
+                        <div class="avatar-ring">
+                            <img src="student_image.jpeg"
+                                alt="Profile avatar of Biswa" class="avatar" />
+                        </div>
+                        <div class="about-chips">
+                            <span class="chip">📍 Bhubaneswer, India</span>
+                            <span class="chip">🎓 Lakshya Institute Of Technology</span>
+                            <span class="chip">💻 Information and Technology</span>
+
+                        </div>
+                        <div class="social-row">
+                            <a href="https://github.com/BiswaBhusan-2007" target="_blank" rel="noopener"
+                                class="soc-btn">GitHub</a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="soc-btn">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="about-text reveal d1">
+                        <p>Hi! I'm <strong>Biswa Bhusan Acharya</strong> — a Bsc ITM student with a deep obsession for
+                            clean code and thoughtful design. I believe great software isn't just functional, it should
+                            <em>feel</em> good to use.</p>
+                        <p>When I'm not deep in a code editor, I'm probably losing a chess match, devouring
+                            science-fiction novels, or confidently burning dinner while calling it "culinary
+                            experimentation."</p>
+                        <p>I'm driven by the idea that technology can genuinely improve lives — and I want to be part of
+                            building that future, one commit at a time.</p>
+                        <div class="hobbies">
+                            <span class="htag">♟ Chess</span>
+                            <span class="htag">📚 Sci-Fi</span>
+                            <span class="htag">🍳 Cooking</span>
+                            <span class="htag">🎮 Gaming</span>
+                            <span class="htag">✈️ Travel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="skills-block reveal">
+                    <h3 class="sub-head">Technical Skills</h3>
+                    <div class="skills-grid" id="skillsGrid">
+                        <div class="skill-row" data-pct="90"><span class="sk-name">HTML &amp; CSS</span>
+                            <div class="sk-track">
+                                <div class="sk-fill"></div>
+                            </div><span class="sk-pct">90%</span>
+                        </div>
+                        <div class="skill-row" data-pct="75"><span class="sk-name">JavaScript</span>
+                            <div class="sk-track">
+                                <div class="sk-fill"></div>
+                            </div><span class="sk-pct">75%</span>
+                        </div>
+                        <div class="skill-row" data-pct="65"><span class="sk-name">Python</span>
+                            <div class="sk-track">
+                                <div class="sk-fill"></div>
+                            </div><span class="sk-pct">65%</span>
+                        </div>
+                        <div class="skill-row" data-pct="80"><span class="sk-name">C</span>
+                            <div class="sk-track">
+                                <div class="sk-fill"></div>
+                            </div><span class="sk-pct">80%</span>
+                        </div>
+                        <div class="skill-row" data-pct="85"><span class="sk-name">UI / UX Design</span>
+                            <div class="sk-track">
+                                <div class="sk-fill"></div>
+                            </div><span class="sk-pct">85%</span>
+                        </div>
+                        <div class="skill-row" data-pct="70"><span class="sk-name">Problem Solving</span>
+                            <div class="sk-track">
+                                <div class="sk-fill"></div>
+                            </div><span class="sk-pct">70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUBJECTS -->
+        <section id="subjects" class="section alt">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="eyebrow">02 — Subjects</span>
+                    <h2>What I Study</h2>
+                </div>
+                <ul class="subject-grid" id="subjectList">
+                    <li class="sc reveal">
+                        <div class="sc-top"><span class="sc-emoji">💻</span></div><span class="sc-name">Operating
+                            Sysytem</span><button class="sc-del" onclick="removeSubject(this)" title="Remove">×</button>
+                    </li>
+                    <li class="sc reveal d1">
+                        <div class="sc-top"><span class="sc-emoji">📐</span></div><span
+                            class="sc-name">Mathematics</span><button class="sc-del" onclick="removeSubject(this)"
+                            title="Remove">×</button>
+                    </li>
+                    <li class="sc reveal d2">
+                        <div class="sc-top"><span class="sc-emoji">🔬</span></div><span
+                            class="sc-name">Physics</span><button class="sc-del" onclick="removeSubject(this)"
+                            title="Remove">×</button>
+                    </li>
+                    <li class="sc reveal d1">
+                        <div class="sc-top"><span class="sc-emoji">🌍</span></div><span
+                            class="sc-name">Data Structure Using C</span><button class="sc-del" onclick="removeSubject(this)"
+                            title="Remove">×</button>
+                    </li>
+                   
+                </ul>
+                <div class="add-row reveal">
+                    <input type="text" id="newSubject" class="add-input" placeholder="Type a subject and press Enter…"
+                        maxlength="40" />
+                    <button class="btn-accent sm" onclick="addSubject()">+ Add</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARKS -->
+        <section id="marks" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="eyebrow">03 — Marks</span>
+                    <h2>Academic Results</h2>
+                </div>
+                <div class="marks-layout">
+                    <div class="donut-col reveal">
+                        <div class="donut-wrap">
+                            <svg viewBox="0 0 180 180" class="donut-svg" aria-label="Average score donut chart">
+                                <circle class="d-bg" cx="90" cy="90" r="70" />
+                                <circle class="d-ring" cx="90" cy="90" r="70" id="donutRing" />
+                            </svg>
+                            <div class="donut-center">
+                                <span class="d-val" id="donutVal">—</span>
+                                <span class="d-lbl">/ 100</span>
+                            </div>
+                        </div>
+                        <div class="grade-key">
+                            <div class="gk-row"><span class="gk-dot ap"></span><span>A+ (70–100)</span></div>
+                            <div class="gk-row"><span class="gk-dot a"></span><span>A (80–89)</span></div>
+                            <div class="gk-row"><span class="gk-dot b"></span><span>B (70–79)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="marks-table-wrap reveal d1">
+                        <table class="marks-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Marks</th>
+                                    <th>Grade</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="marksBody">
+                                <tr data-m="96">
+                                    <td>Data Structure Using C</td>
+                                    <td>96</td>
+                                    <td><span class="gb ap">A+</span></td>
+                                    <td>
+                                        <div class="mb">
+                                            <div class="mf" style="width:96%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-m="91">
+                                    <td>Calculus</td>
+                                    <td>91</td>
+                                    <td><span class="gb ap">A+</span></td>
+                                    <td>
+                                        <div class="mb">
+                                            <div class="mf" style="width:91%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-m="85">
+                                    <td>Physics</td>
+                                    <td>85</td>
+                                    <td><span class="gb a">A</span></td>
+                                    <td>
+                                        <div class="mb">
+                                            <div class="mf" style="width:85%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-m="88">
+                                    <td>Operating Sysytem</td>
+                                    <td>88</td>
+                                    <td><span class="gb a">A</span></td>
+                                    <td>
+                                        <div class="mb">
+                                            <div class="mf" style="width:88%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-m="82">
+                                    <td>EVS</td>
+                                    <td>82</td>
+                                    <td><span class="gb a">A</span></td>
+                                    <td>
+                                        <div class="mb">
+                                            <div class="mf" style="width:82%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-m="94">
+                                    <td>Odia</td>
+                                    <td>94</td>
+                                    <td><span class="gb ap">A+</span></td>
+                                    <td>
+                                        <div class="mb">
+                                            <div class="mf" style="width:94%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>Average</strong></td>
+                                    <td id="avgMarks" colspan="3"><strong>—</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Fav website -->
+                <div class="fav-block reveal">
+                    <h3 class="sub-head">Favourite Website</h3>
+                    <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer" class="fav-link">
+                        <span class="fav-logo">MDN</span>
+                        <div>
+                            <strong>MDN Web Docs</strong>
+                            <small>The definitive open reference for web developers worldwide.</small>
+                        </div>
+                        <span class="fav-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GOALS -->
+        <section id="goals" class="section alt">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="eyebrow">04 — Goals</span>
+                    <h2>Where I'm Headed</h2>
+                </div>
+                <ol class="goals-list" style="list-style:none;padding:0;">
+                    <li class="goal-card reveal">
+                        <div class="gc-num">01</div>
+                        <div class="gc-body">
+                            <h4>Build a Full-Stack App</h4>
+                            <p>Design and ship a complete web application — from database schema to deployed UI — by
+                                year end.</p>
+                            <span class="status-tag inprog">In Progress</span>
+                        </div>
+                    </li>
+                    <li class="goal-card reveal d1">
+                        <div class="gc-num">02</div>
+                        <div class="gc-body">
+                            <h4>Score 90%+ Across All Subjects</h4>
+                            <p>Maintain consistent academic excellence — no weak spots this semester.</p>
+                            <span class="status-tag planned">Planned</span>
+                        </div>
+                    </li>
+                    <li class="goal-card reveal d2">
+                        <div class="gc-num">03</div>
+                        <div class="gc-body">
+                            <h4>Contribute to Open Source</h4>
+                            <p>Merge at least one meaningful pull request into a real project on GitHub.</p>
+                            <span class="status-tag planned">Planned</span>
+                        </div>
+                    </li>
+                    <li class="goal-card reveal d3">
+                        <div class="gc-num">04</div>
+                        <div class="gc-body">
+                            <h4>DSA Certification</h4>
+                            <p>Complete a structured Data Structures &amp; Algorithms course and earn the certificate.
+                            </p>
+                            <span class="status-tag done">Done ✓</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="sec-head reveal">
+                    <span class="eyebrow">05 — Contact</span>
+                    <h2>Get in Touch</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <p>Have a question, a project idea, or just want to say hi? I'd love to hear from you.</p>
+                        <div class="cinfo-rows">
+                            <div class="cinfo-row"><span class="ci-icon">✉</span><span>biswabhusanacharya49@gmail.com</span>
+                            </div>
+                            <div class="cinfo-row"><span class="ci-icon">📍</span><span>Bhubaneswar, India</span></div>
+                            <div class="cinfo-row"><span class="ci-icon">🕐</span><span>Mon – Fri, 4 PM – 8 PM
+                                    IST</span></div>
+                        </div>
+                    </div>
+                    <div class="contact-form reveal d1">
+                        <div class="field-pair">
+                            <div class="fg">
+                                <label for="fname">Your Name</label>
+                                <input type="text" id="fname" placeholder="Enter your name" autocomplete="name" />
+                            </div>
+                            <div class="fg">
+                                <label for="fclass">Proffection</label>
+                                <input type="text" id="fclass" placeholder="Student" />
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <label for="fmessage">Message</label>
+                            <textarea id="fmessage" rows="5" placeholder="Write something…"></textarea>
+                        </div>
+                        <div class="form-row-btm">
+                            <button class="btn-accent" onclick="submitForm()">Send Message →</button>
+                            <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <p>Built with curiosity by <strong>Biswa Bhusan</strong> · 2025</p>
+                <a href="#hero" class="back-top">↑ Back to top</a>
+            </div>
+        </footer>
+
+    </div><!-- /page-wrap -->
+
+    <button class="fab" id="fab" onclick="scrollToTop()">↑</button>
+
+    <script src="student_profile.js"></script>
+</body>
+
+</html>
